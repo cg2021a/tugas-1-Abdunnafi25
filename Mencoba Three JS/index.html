@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bangun 3 Dimensi</title>
+    <script src="js/three.min.js"></script>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+
+<script>
+    let scene, camera, renderer;
+
+
+    // bangun = Kubus
+    // material = MeshNormal
+    let createCube = function() {
+        const geometry = new THREE.BoxGeometry(1, 1, 1);
+        const material = new THREE.MeshNormalMaterial({
+            color: '#6317ff'
+        });
+        cube = new THREE.Mesh(geometry, material);
+        scene.add(cube);
+    };
+
+    // bangun = cone
+    // material = meshbasic
+    // wireframe
+    let createCone = function() {
+        const geometry = new THREE.ConeGeometry(1, 2, 100);
+        const material = new THREE.MeshBasicMaterial({
+            color: 0xf5a84,
+            shininess: 100,
+            wireframe: true
+        });
+        cone = new THREE.Mesh(geometry, material);
+        scene.add(cone);
+    };
+
+
+    // bangun = knot
+    // material = meshphong
+    let createKnot = function() {
+        const geometry = new THREE.TorusKnotGeometry(0.3, 0.1, 100, 20);
+        const material = new THREE.MeshPhongMaterial({
+            color: '#6317ff',
+        });
+        torusKnot = new THREE.Mesh(geometry, material);
+        scene.add(torusKnot);
+
+    };
+
+    // bangun = silinder
+    // material = meshtoon
+    // light = hemisphere
+    // wireframe
+    let createCylinder = function() {
+        const geometry = new THREE.CylinderGeometry(0.5, 0.5, 2, 100);
+        const material = new THREE.MeshToonMaterial({
+            color: '#4dffec',
+            wireframe: true
+        });
+        const light = new THREE.HemisphereLight(0xffffbb, 0xff0000, 1);
+        scene.add(light);
+        cylinder = new THREE.Mesh(geometry, material);
+        scene.add(cylinder);
+    };
+
+    // bangun = sphere
+    // material = meshphong
+    let createSphere = function() {
+        const radius = 0.5;
+
+        const widthSegments = 30;
+        const heightSegments = 1;
+        const phiStart = Math.PI * 0.25;
+        const phiLength = Math.PI * 1.46;
+        const thetaStart = Math.PI * 0.25;
+        const thetaLength = Math.PI * 0.5;
+        // const light = new THREE.HemisphereLight(0xffffbb, 0xff0000, 1);
+        // scene.add(light);
+        const material = new THREE.MeshPhongMaterial({
+            color: '#7f8887'
+        });
+        const geometry = new THREE.SphereGeometry(
+            radius,
+            widthSegments, heightSegments,
+            phiStart, phiLength,
+            thetaStart, thetaLength);
+        sphere = new THREE.Mesh(geometry, material);
+        scene.add(sphere);
+    };
+
+
+
+
+
+    // set up the environment - 
+    // initiallize scene, camera, objects and renderer
+    let init = function() {
+        // 1. create the scene
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color('#658d8a');
+
+        // 2. create an locate the camera       
+        camera = new THREE.PerspectiveCamera(30, window.innerWidth / window.innerHeight,
+            1, 1000);
+        camera.position.z = 20;
+
+        // 3. create an locate the object on the scene   
+        createCube();
+        cube.position.x = -4;
+        createCone();
+        cone.position.x = -1.7;
+        createKnot();
+        torusKnot.position.x = 0.0;
+        createCylinder();
+        cylinder.position.x = 1.7;
+        createSphere();
+        sphere.position.x = 4;
+
+
+        // 4. create the renderer     
+        renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+    };
+
+
+    // main animation loop - calls 50-60 in a second.
+    let mainLoop = function() {
+        cube.rotation.x += 0.01;
+        cube.rotation.y += 0.01;
+
+        torusKnot.rotation.x += 0.01;
+        torusKnot.rotation.y += 0.01;
+
+        cylinder.rotation.x += 0.01;
+        cylinder.rotation.y += 0.01;
+
+        sphere.rotation.x += 0.01;
+        sphere.rotation.y += 0.01;
+
+        cone.rotation.x += 0.01;
+        cone.rotation.y += 0.01;
+
+        renderer.render(scene, camera);
+        requestAnimationFrame(mainLoop);
+    };
+
+    ///////////////////////////////////////////////
+    init();
+    mainLoop();
+</script>
