@@ -18,6 +18,7 @@
 
 Hasil Pengerjaan :
 Pada hasil pengerjaan, gambar yang saya gambar pada sebelah kiri adalah gambar aquarium pada angle Kiri Atas, dan gambar yang saya gambar pada sebelah kanan, yaitu yang bergerak ke atas dan kebawah dengan kecepatan 0.0068 adalah gambar pada angle sebelah Belakang Atas. Hasil pengerjaan yang telah saya buat dapat dilihat pada gambar berikut : 
+
 ![image](https://github.com/cg2021a/tugas-1-Abdunnafi25/blob/main/file%20dokumentasi/ezgif.com-gif-maker.gif)
 
 
