@@ -40,4 +40,7 @@ Gambar hasil pengerjaan :
 ![image](https://github.com/cg2021a/tugas-1-Abdunnafi25/blob/main/file%20dokumentasi/tugas%201%203D.gif)
 
 # Mencoba Three JS 2
+Berikut hasil dari pengerjaan game memilih warna yang sama. untuk bangunan yang saya pakai adalah bangunan TetrahedronGeometry 
 [Game memilih warna yang sama](https://cg2021a.github.io/tugas-1-Abdunnafi25/Threejs2/)
+
+Untuk tampilan dari game yang telah dibuat sebagai berikut : 
