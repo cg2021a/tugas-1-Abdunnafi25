@@ -38,3 +38,6 @@ Bangun yang saya buat :
 Gambar hasil pengerjaan :
 
 ![image](https://github.com/cg2021a/tugas-1-Abdunnafi25/blob/main/file%20dokumentasi/tugas%201%203D.gif)
+
+# Mencoba Three JS 2
+![Game memilih warna yang sama](https://cg2021a.github.io/tugas-1-Abdunnafi25/Threejs2/)
