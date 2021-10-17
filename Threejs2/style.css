@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700&display=swap");
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    margin: 20px 20px;
+}
+
+.judul {
+    text-align: center;
+    color: white;
+}
+
+p,
+label {
+    color: white;
+}
+
+.webgl {
+    border: 2px solid white;
+}
+
+.lighting-conf {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.choices {
+    margin: 20px 0;
+}
+
+.choice {
+    margin: 0 20px;
+}
+
+.preview-canvas {
+    /* position: relative; */
+    /* margin: 20px 0; */
+    margin: 30px 0;
+}
+
+.webgl {
+    margin: 0 4%;
+    border-radius: 10px;
+}
+
+.desc {
+    font-weight: 500;
+    text-align: center;
+    color: white;
+    padding: 0 5%;
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status,
+.keterangan {
+    width: 48%;
+}
+
+.keterangan {
+    text-align: left;
+}
+
+#play-button {
+    padding: 10px 25px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 0;
+    width: 30%;
+    margin-top: 40px;
+    background-color: aqua;
+    color: black;
+}
+
+#gameover {
+    display: none;
+}
